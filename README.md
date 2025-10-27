@@ -1,5 +1,5 @@
 # Simple Reinforcement Learning Configuration
-This small Python project is something I built to practice how reinforcement learning can be used for simple dynamic configuration problems.  
+This small Python project is built to practice how reinforcement learning can be used for simple dynamic configuration problems.  
 It’s not meant to be a full research model, just a personal prototype to test the main loop of RL: state, action, reward, update.
 
 The idea comes from thinking about how an agent could learn to choose algorithm settings depending on changing conditions.  
