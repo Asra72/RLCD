@@ -5,7 +5,7 @@ It’s not meant to be a full research model, just a first personal prototype to
 The idea comes from thinking about how an agent could learn to choose algorithm settings depending on changing conditions.  
 Since I’m still learning deep RL, I tried to implement everything from scratch, only using basic PyTorch functions and no advanced tricks or libraries.
 
-## What it does
+## What it does?
 The script creates a very small artificial environment.  
 The agent gets two random numbers as the state, picks one of three actions, and receives a reward based on how “good” that choice was.  
 It then updates its policy parameters to improve future actions.
