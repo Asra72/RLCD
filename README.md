@@ -3,11 +3,10 @@ This small Python project is something I built to practice how reinforcement lea
 It’s not meant to be a full research model, just a first personal prototype to test the main loop of RL: state, action, reward, update.
 
 The idea comes from thinking about how an agent could learn to choose algorithm settings depending on changing conditions.  
-Since I’m still learning deep RL, I tried to implement everything from scratch, only using basic PyTorch functions and no advanced tricks or libraries.
 
 ## What it does?
 The script creates a very small artificial environment.  
-The agent gets two random numbers as the state, picks one of three actions, and receives a reward based on how “good” that choice was.  
+The agent gets two random numbers as the state, picks one of three actions, and receives a reward based on how good that choice was.  
 It then updates its policy parameters to improve future actions.
 
 The results are noisy and unstable, which is expected in such a simple setup, but it still shows learning behavior after some episodes.
