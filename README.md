@@ -1,6 +1,6 @@
 # Simple Reinforcement Learning Config Demo
 This small Python project is something I built to practice how reinforcement learning can be used for simple dynamic configuration problems.  
-It’s not meant to be a full research model, just a first personal prototype to test the main loop of RL: state, action, reward, update.
+It’s not meant to be a full research model, just a personal prototype to test the main loop of RL: state, action, reward, update.
 
 The idea comes from thinking about how an agent could learn to choose algorithm settings depending on changing conditions.  
 
@@ -15,4 +15,4 @@ The results are noisy and unstable, which is expected in such a simple setup, bu
 Just open a terminal and run.
 
 ## Next steps
-I plan to connect this toy environment to a real solver or optimization problem, so the reward signal will come from actual algorithm performance instead of random values.
+I plan to connect this toy environment to a real solver or optimization problem, so the reward will come from actual algorithm performance instead of random values.
