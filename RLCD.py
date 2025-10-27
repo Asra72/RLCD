@@ -63,7 +63,7 @@ def train():
     opt = optim.Adam(net.parameters(), lr=0.002)
     gamma = 0.97
     ep_total = 300
-    print("training...")
+    print("training")
 
     for ep in range(1, ep_total + 1):
         S, A, R, V, L, tr = one_episode(net, gamma)
@@ -90,3 +90,4 @@ def train():
 
 if __name__ == "__main__":
     train()
+
