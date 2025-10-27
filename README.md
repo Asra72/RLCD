@@ -1,6 +1,4 @@
-# RLCD
-
-## Simple Reinforcement Learning Config Demo
+# Simple Reinforcement Learning Config Demo
 This small Python project is something I built to practice how reinforcement learning can be used for simple dynamic configuration problems.  
 It’s not meant to be a full research model, just a first personal prototype to test the main loop of RL: state, action, reward, update.
 
