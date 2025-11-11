@@ -39,7 +39,7 @@ def one_episode(model, gamma=0.97):
         exp_logits = torch.exp(logits)
         probs = exp_logits / torch.sum(exp_logits)
         a = torch.multinomial(probs, 1).item()
-        logp = torch.log(probs[a] + 1e-8)
+        logp = torch.log(probs[a])
         ns, r, done = next_state(s, a)
         s_list.append(s)
         a_list.append(a)
@@ -88,3 +88,4 @@ def train():
 
 if __name__ == "__main__":
     train()
+
