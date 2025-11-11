@@ -60,11 +60,10 @@ def train():
     torch.manual_seed(3)
     random.seed(3)
     net = TinyNet()
-    opt = optim.Adam(net.parameters(), lr=0.002)
+    opt = optim.SGD(net.parameters(), lr=0.01, momentum=0.9)
     gamma = 0.97
     ep_total = 300
     print("training")
-
     for ep in range(1, ep_total + 1):
         S, A, R, V, L, tr = one_episode(net, gamma)
         pg_loss = -(L * (R - V.detach())).mean()
@@ -73,7 +72,6 @@ def train():
         opt.zero_grad()
         loss.backward()
         opt.step()
-
         if ep % 25 == 0:
             s = make_state()
             done = False
@@ -90,4 +88,3 @@ def train():
 
 if __name__ == "__main__":
     train()
-
