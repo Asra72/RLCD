@@ -1,18 +1,11 @@
 # Simple Reinforcement Learning Configuration
-This small Python project is built to practice how reinforcement learning can be used for simple dynamic configuration problems.  
-It’s not meant to be a full research model, just a personal prototype to test the main loop of RL: state, action, reward, update.
+This project demonstrates how Reinforcement Learning (PPO) can be used for algorithm configuration — automatically tuning solver parameters to improve performance.
 
-The idea comes from thinking about how an agent could learn to choose algorithm settings depending on changing conditions.  
+I applied a simple Actor–Critic PPO framework to a small Capacitated Vehicle Routing Problem (CVRP) solved with IBM CPLEX (via Docplex).
+The RL agent observes basic instance features (like demand utilization and distances), then proposes different solver parameter settings such as emphasis, heuristic frequency, threads, and MIP gap.
+Each configuration is tested in CPLEX, and the solver’s objective and runtime are turned into a reward signal for learning.
 
-## What it does?
-The script creates a very small artificial environment.  
-The agent gets two random numbers as the state, picks one of three actions, and receives a reward based on how good that choice was.  
-It then updates its policy parameters to improve future actions.
-
-The results are noisy and unstable, which is expected in such a simple setup, but it still shows learning behavior after some episodes.
+Although the instance is small and deterministic (so results converge quickly), the project shows the full workflow of combining deep reinforcement learning with mathematical optimization solvers — a practical example of intelligent algorithm tuning.
 
 ## How to run:
 Just open a terminal and run.
-
-## Next steps
-I plan to connect this toy environment to a real solver or optimization problem, so the reward will come from actual algorithm performance instead of random values.
